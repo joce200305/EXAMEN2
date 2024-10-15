@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reemplazo </title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container mt-5">
+        <h2 class="text-center">Reemplazo de palabras</h2>
+        
+        <div class="mb-3">
+            <label for="textoUsuario" class="form-label">Texto:</label>
+            <textarea id="textoUsuario" class="form-control" rows="4" placeholder="Escribe tu texto aquí..."></textarea>
+        </div>
+
+        <div class="mb-3">
+            <label for="palabraBusqueda" class="form-label">Palabra a buscar en el texto:</label>
+            <input type="text" id="palabraBusqueda" class="form-control" placeholder="Ingresa una palabra del texto">
+            <div id="errorBusqueda" class="text-danger"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="palabraDiccionario" class="form-label">Palabra del diccionario para reemplazar:</label>
+            <select id="palabraDiccionario" class="form-select">
+                <option value="" disabled selected>Selecciona una palabra del diccionario</option>
+            </select>
+            <div id="errorDiccionario" class="text-danger"></div>
+        </div>
+
+        <div class="mb-3">
+            <label for="sinonimoSelect" class="form-label">Selecciona un sinónimo:</label>
+            <select id="sinonimoSelect" class="form-select">
+                <option value="" disabled selected>Selecciona un sinónimo</option>
+            </select>
+            <div id="errorSinonimo" class="text-danger"></div>
+        </div>
+
+        <div class="d-grid">
+            <button id="reemplazarBtn" class="btn btn-primary">Reemplazar palabra</button>
+        </div>
+
+        <div class="mt-4">
+            <h4>Resultado:</h4>
+            <div id="resultado"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
